@@ -16,7 +16,7 @@ const fontSans = FontSans({
 
 const title = 'Mr.🆖 AI Search'
 const description =
-  'A fully open-source AI-powered answer engine with a generative UI.'
+  'A fully open-source AI-powered search engine with a generative UI.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aisearch.mister5.net'),
