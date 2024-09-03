@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^0.0.21",
+    "@ai-sdk/azure": "^0.0.32",
     "@ai-sdk/google": "^0.0.22",
     "@ai-sdk/openai": "^0.0.31",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -27,7 +28,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@tailwindcss/typography": "^0.5.12",
     "@upstash/redis": "^1.30.0",
-    "ai": "^3.2.22",
+    "ai": "^3.3.25",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "embla-carousel-react": "^8.0.0",
