@@ -11,12 +11,12 @@ const exampleMessages = [
     message: 'Why is Nvidia growing so rapidly?'
   },
   {
-    heading: '🎞️ Could you recommend a video about the Paris Olympics?',
-    message: 'Could you recommend a video about the Paris Olympics?'
+    heading: '🎞️ Tesla vs BYD video',
+    message: 'Tesla vs BYD video'
   },
   {
-    heading: '🔗 Summary: https://arxiv.org/pdf/2402.06196v2',
-    message: 'Summary: https://arxiv.org/pdf/2402.06196v2'
+    heading: '🔗 Summary: https://arxiv.org/pdf/2407.16833',
+    message: 'Summary: https://arxiv.org/pdf/2407.16833'
   }
 ]
 export function EmptyScreen({
