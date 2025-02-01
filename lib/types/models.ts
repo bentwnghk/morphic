@@ -19,10 +19,10 @@ export const models: Model[] = [
 //    providerId: 'anthropic'
 //  },
 //  {
- //   id: process.env.NEXT_PUBLIC_AZURE_DEPLOYMENT_NAME || 'undefined',
- //   name: process.env.NEXT_PUBLIC_AZURE_DEPLOYMENT_NAME || 'Undefined',
- //   provider: 'Azure',
- //   providerId: 'azure'
+//    id: process.env.NEXT_PUBLIC_AZURE_DEPLOYMENT_NAME || 'undefined',
+//    name: process.env.NEXT_PUBLIC_AZURE_DEPLOYMENT_NAME || 'Undefined',
+//    provider: 'Azure',
+//    providerId: 'azure'
 //  },
 //  {
 //    id: 'accounts/fireworks/models/deepseek-r1',
@@ -49,10 +49,10 @@ export const models: Model[] = [
 //    providerId: 'google'
 //  },
 //  {
- //   id: 'gemini-2.0-flash-exp',
- //   name: 'Gemini 2.0 Flash (Experimental)',
-//  provider: 'Google Generative AI',
- //   providerId: 'google'
+//    id: 'gemini-2.0-flash-exp',
+//    name: 'Gemini 2.0 Flash (Experimental)',
+//    provider: 'Google Generative AI',
+//    providerId: 'google'
 //  },
 //  {
 //    id: 'deepseek-r1-distill-llama-70b',
