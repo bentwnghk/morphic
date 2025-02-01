@@ -30,18 +30,18 @@ export const models: Model[] = [
 //    provider: 'Fireworks',
 //    providerId: 'fireworks'
 //  },
-  {
-    id: 'deepseek-reasoner',
-    name: 'DeepSeek R1',
-    provider: 'DeepSeek',
-    providerId: 'deepseek'
-  },
-  {
-    id: 'deepseek-chat',
-    name: 'DeepSeek V3',
-    provider: 'DeepSeek',
-    providerId: 'deepseek'
-  },
+//  {
+//    id: 'deepseek-reasoner',
+//    name: 'DeepSeek R1',
+//    provider: 'DeepSeek',
+//    providerId: 'deepseek'
+//  },
+//  {
+//    id: 'deepseek-chat',
+//    name: 'DeepSeek V3',
+//    provider: 'DeepSeek',
+//    providerId: 'deepseek'
+//  },
 //  {
 //    id: 'gemini-1.5-pro-002',
 //    name: 'Gemini 1.5 Pro',
