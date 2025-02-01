@@ -44,10 +44,10 @@ export function getModel(model: string) {
       baseURL: `${process.env.OLLAMA_BASE_URL}/api`
     })
 
-    // if model is deepseek-r1, add reasoning middleware
-    if (model.includes('deepseek-r1')) {
+    // if model is deepseek-reasoner, add reasoning middleware
+    if (model.includes('deepseek-reasoner')) {
       return wrapLanguageModel({
-        model: ollama(modelName),
+        model: deepseek(modelName),
         middleware: extractReasoningMiddleware({
           tagName: 'think'
         })
