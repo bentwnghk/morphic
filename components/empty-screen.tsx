@@ -3,8 +3,8 @@ import { ArrowRight } from 'lucide-react'
 
 const exampleMessages = [
   {
-    heading: '🌐 Tell me about the Olympics',
-    message: 'Tell me about the Olympics'
+    heading: '🌐 What is DeepSeek R1?',
+    message: 'What is DeepSeek R1?'
   },
   {
     heading: '🌐 Why is Nvidia growing so rapidly?',
@@ -15,8 +15,8 @@ const exampleMessages = [
     message: 'Tesla vs BYD video'
   },
   {
-    heading: '🔗 Summary: https://arxiv.org/pdf/2407.16833',
-    message: 'Summary: https://arxiv.org/pdf/2407.16833'
+    heading: '🔗 Summary: https://arxiv.org/pdf/2501.05707',
+    message: 'Summary: https://arxiv.org/pdf/2501.05707'
   }
 ]
 export function EmptyScreen({
