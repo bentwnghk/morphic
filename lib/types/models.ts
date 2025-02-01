@@ -12,12 +12,12 @@ export const models: Model[] = [
 //    provider: 'Anthropic',
 //    providerId: 'anthropic'
 //  },
-  {
-    id: 'claude-3-5-haiku-20241022',
-    name: 'Claude 3.5 Haiku',
-    provider: 'Anthropic',
-    providerId: 'anthropic'
-  },
+//  {
+//    id: 'claude-3-5-haiku-20241022',
+//    name: 'Claude 3.5 Haiku',
+//    provider: 'Anthropic',
+//    providerId: 'anthropic'
+//  },
   {
     id: process.env.NEXT_PUBLIC_AZURE_DEPLOYMENT_NAME || 'undefined',
     name: process.env.NEXT_PUBLIC_AZURE_DEPLOYMENT_NAME || 'Undefined',
@@ -54,12 +54,12 @@ export const models: Model[] = [
     provider: 'Google Generative AI',
     providerId: 'google'
   },
-  {
-    id: 'deepseek-r1-distill-llama-70b',
-    name: 'DeepSeek R1 Distill Llama 70B',
-    provider: 'Groq',
-    providerId: 'groq'
-  },
+//  {
+//    id: 'deepseek-r1-distill-llama-70b',
+//    name: 'DeepSeek R1 Distill Llama 70B',
+//    provider: 'Groq',
+//    providerId: 'groq'
+//  },
 //  {
 //    id: 'deepseek-r1',
 //    name: 'DeepSeek R1',
