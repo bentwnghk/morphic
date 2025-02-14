@@ -1,6 +1,3 @@
-FROM oven/bun:1 AS base
-WORKDIR /app
-
 # Base image
 FROM oven/bun:1.1.3-alpine AS builder
 
@@ -29,5 +26,5 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/bun.lockb ./bun.lockb
 COPY --from=builder /app/node_modules ./node_modules
 
-# Start development server
-CMD ["bun", "dev", "-H", "0.0.0.0"]
+# Start production server
+CMD ["bun", "start", "-H", "0.0.0.0"]
