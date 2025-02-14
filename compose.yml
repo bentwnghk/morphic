@@ -1,10 +1,16 @@
-# This is a Docker Compose file for setting up the morphic-stack environment.
+# Docker Compose configuration for the morphic-stack development environment
 
 name: morphic-stack
 services:
   morphic:
-    container_name: morphic
-    image: ghcr.io/miurla/morphic:latest
+    image: ghcr.io/${GITHUB_REPOSITORY:-your-username/morphic}:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      cache_from:
+        - morphic:builder
+        - morphic:latest
+    command: bun dev -H 0.0.0.0
     env_file: .env.local # Load environment variables
     ports:
       - '3000:3000' # Maps port 3000 on the host to port 3000 in the container.

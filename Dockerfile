@@ -1,41 +1,33 @@
 FROM oven/bun:1 AS base
 WORKDIR /app
 
-# build
-FROM base AS builder
+# Base image
+FROM oven/bun:1.1.3-alpine AS builder
+
+# Install build tools
+RUN apk add --no-cache nodejs npm git
+
 WORKDIR /app
 
+# Install dependencies (separated for better cache utilization)
 COPY package.json bun.lockb ./
 RUN bun install --frozen-lockfile
 
+# Copy source code and build
 COPY . .
-# in production build, skip validation of typescript
-RUN sed -i 's/nextConfig = {/nextConfig = { typescript: { ignoreBuildErrors: true }, eslint: { ignoreDuringBuilds: true },/' next.config.mjs
-ENV NEXT_TELEMETRY_DISABLED=1
-ENV NODE_ENV=production
+RUN bun next telemetry disable
 RUN bun run build
 
-# Production image, copy all the files and run next
-FROM base AS runner
+# Runtime stage
+FROM oven/bun:1.1.3-alpine AS runner
 WORKDIR /app
 
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
-
+# Copy only necessary files from builder
+COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/bun.lockb ./bun.lockb
+COPY --from=builder /app/node_modules ./node_modules
 
-# Set the correct permission for prerender cache
-RUN mkdir .next && chown bun:bun .next
-
-# Automatically leverage output traces to reduce image size
-# https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY --from=builder --chown=bun:bun /app/.next/standalone ./
-COPY --from=builder --chown=bun:bun /app/.next/static ./.next/static
-
-USER bun
-
-EXPOSE 3000
-
-ENV PORT=3000
-
-CMD ["bun", "run", "server.js"]
+# Start development server
+CMD ["bun", "dev", "-H", "0.0.0.0"]
